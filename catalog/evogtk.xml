@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glade-catalog version="2.16" targetable="2.14,2.12,2.10,2.8" supports="gtkbuilder" name="evogtkwidgets" library="gladepython" depends="gtk+" domain="glade3" book="gtk" language="python">
+
+	<init-function>glade_python_init</init-function>
+
+	<glade-widget-classes>
+		<!-- Cairo canvas widget class definition -->
+		<glade-widget-class name="CairoCanvas" libglade-unsupported="True" generic-name="cairocanvas" title="EVOGTK Cairo canvas Widget" />    
+
+		<!-- Cairo scroller widget class definition -->
+		<glade-widget-class name="CairoScroller" libglade-unsupported="True" generic-name="cairoscroller" title="EVOGTK Cairo Scroller Widget" />
+
+		<!-- Floating window widget class definition -->
+		<glade-widget-class name="FloatingWindow" toplevel="True" libglade-unsupported="True" generic-name="floatingwindow" title="EVOGTK Floating Window Widget" />
+
+		<!-- Tray Icon widget class definition -->
+		<glade-widget-class name="TrayIcon" toplevel="True" libglade-unsupported="True" generic-name="trayicon" title="EVOGTK Tray Icon Widget" />
+
+		<!-- Regular Expression Entry widget class definition -->
+		<glade-widget-class name="RegExpEntry" libglade-unsupported="True" generic-name="regexpentry" title="EVOGTK Regular Expression Entry Widget">
+		    <properties>
+		        <property id="buffer" visible="False" />
+		    </properties>
+		</glade-widget-class>
+		
+		<!-- Date Picker widget class definition -->
+		<glade-widget-class name="DatePicker" libglade-unsupported="True" generic-name="datepicker" title="EVOGTK Date Picker Widget">
+		    <properties>
+		        <property id="buffer" visible="False" />
+		    </properties>
+		</glade-widget-class>
+
+		<!-- Color Picker widget class definition -->
+		<glade-widget-class name="ColorPicker" libglade-unsupported="True" generic-name="colorpicker" title="EVOGTK Color Picker Widget" />
+
+		<!-- Font combo widget class definition -->
+		<glade-widget-class name="FontCombo" libglade-unsupported="True" generic-name="fontcombo" title="EVOGTK Font combobox Widget" />
+
+		<!-- Source editor widget class definition -->
+	    <glade-widget-class name="SourceEditor" libglade-unsupported="True" generic-name="sourceeditor" title="EVOGTK Source Editor Widget">
+		    <properties>
+		        <property id="size" query="False" default="1" visible="False" />
+		    </properties>
+		</glade-widget-class>
+
+		<!-- Web Browser widget class definition -->
+	    <glade-widget-class name="WebBrowser" libglade-unsupported="True" generic-name="webbrowser" title="EVOGTK Web Browser Widget">
+		    <properties>
+		        <property id="size" query="False" default="1" visible="False" />
+		    </properties>
+		</glade-widget-class>
+
+		<!-- DB widgets class definitions -->
+	    <glade-widget-class name="DBEntry" libglade-unsupported="True" generic-name="dbentry" title="EVOGTK DB Entry" />
+	    <glade-widget-class name="DBSpinButton" libglade-unsupported="True" generic-name="dbspinbutton" title="EVOGTK DB SpinButton" />
+		<glade-widget-class name="DBCheckButton" libglade-unsupported="True" generic-name="dbcheckbutton" title="EVOGTK DB CheckButton" />
+	    <glade-widget-class name="DBComboBox" libglade-unsupported="True" generic-name="dbcombobox" title="EVOGTK DB ComboBox" />
+	    <glade-widget-class name="DBRegExpEntry" libglade-unsupported="True" generic-name="dbregexpentry" title="EVOGTK DB Regular Expression Entry" />
+		<glade-widget-class name="DBDatePicker" libglade-unsupported="True" generic-name="dbdatepicker" title="EVOGTK DB DatePicker" />
+		<glade-widget-class name="DBCalendar" libglade-unsupported="True" generic-name="dbcalendar" title="EVOGTK DB Calendar" />
+		
+	    <!-- 
+	    	<glade-widget-class toplevel="True" name="CairoScroller" libglade-unsupported="True" generic-name="cairoscroller 2" title="Cairo Scroller Toplevel" adaptor="CairoScrollerAdaptor"/>
+	    -->
+	</glade-widget-classes>
+ 
+	<glade-widget-group name="evogtk-widgets" title="EVOGTK Widgets">
+		<glade-widget-class-ref name="CairoCanvas" />
+		<glade-widget-class-ref name="CairoScroller" />
+		<glade-widget-class-ref name="FloatingWindow" />
+		<glade-widget-class-ref name="TrayIcon" />
+		<glade-widget-class-ref name="RegExpEntry" />
+		<glade-widget-class-ref name="DatePicker" />
+		<glade-widget-class-ref name="ColorPicker" />
+		<glade-widget-class-ref name="FontCombo" />
+		<glade-widget-class-ref name="SourceEditor" />
+		<glade-widget-class-ref name="WebBrowser" />
+	</glade-widget-group>
+
+	<glade-widget-group name="evogtk-dbwidgets" title="EVOGTK Database Widgets">
+		<glade-widget-class-ref name="DBEntry" />
+		<glade-widget-class-ref name="DBSpinButton" />
+		<glade-widget-class-ref name="DBComboBox" />
+		<glade-widget-class-ref name="DBCheckButton" />
+		<glade-widget-class-ref name="DBRegExpEntry" />
+		<glade-widget-class-ref name="DBDatePicker" />
+		<glade-widget-class-ref name="DBCalendar" />
+	</glade-widget-group>
+
+</glade-catalog>
