@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. EVOGTK tools module &mdash; EVOGTK 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="EVOGTK 1.0.0 documentation" href="index.html" />
+    <link rel="prev" title="2. EVOGTK GUI module" href="gui.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gui.html" title="2. EVOGTK GUI module"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">EVOGTK 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="evogtk-tools-module">
+<h1>3. EVOGTK tools module<a class="headerlink" href="#evogtk-tools-module" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="module-evogtk.tools"></span><dl class="function">
+<dt id="evogtk.tools.fadeWindow">
+<tt class="descclassname">evogtk.tools.</tt><tt class="descname">fadeWindow</tt><big>(</big><em>window</em>, <em>visibility</em>, <em>delay=500</em>, <em>min=0</em>, <em>max=1</em>, <em>destroy=False</em>, <em>locking=False</em><big>)</big><a class="headerlink" href="#evogtk.tools.fadeWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Animates show/hide for a window widget</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="evogtk.tools.formatColor">
+<tt class="descclassname">evogtk.tools.</tt><tt class="descname">formatColor</tt><big>(</big><em>gtkcolor</em>, <em>format=5</em>, <em>alpha=65535</em><big>)</big><a class="headerlink" href="#evogtk.tools.formatColor" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Returns a color in the desired format</dt>
+<dd><p class="first">gtkcolor: A gtk.gdk.Color instance
+alpha: An alpha value (0..65535). Default is 65536
+format: The desired return format. Can be either:</p>
+<blockquote class="last">
+<div>evogtk.COLOR_FORMAT_GTKCOLOR: A gtk.gdk.Color object
+evogtk.COLOR_FORMAT_GTKCOLORALPHA: A tuple with a gtk.gdk.Color object and an alpha value (0..65535)
+evogtk.COLOR_FORMAT_RGB: A tuple with red, green and blue values (0..65535)
+evogtk.COLOR_FORMAT_RGBA: A tuple with red, green, blue and alpha values (0..65535)
+evogtk.COLOR_FORMAT_GLCOLOR: A tuple with red, green, blue and alpha values (0.0..1.0)
+evogtk.COLOR_FORMAT_HTML: An html color formatted string</div></blockquote>
+</dd>
+<dt>Returns:</dt>
+<dd>Color in specified format</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="evogtk.tools.generateSourceWidget">
+<tt class="descclassname">evogtk.tools.</tt><tt class="descname">generateSourceWidget</tt><big>(</big><em>language='python'</em>, <em>linenums=True</em>, <em>syntaxhighlight=True</em>, <em>highlightline=True</em>, <em>editable=True</em>, <em>visiblecursor=True</em><big>)</big><a class="headerlink" href="#evogtk.tools.generateSourceWidget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a GTK sourceview widget or a generic TextView if GTK Sourceview is not available</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="evogtk.tools.moveWindow">
+<tt class="descclassname">evogtk.tools.</tt><tt class="descname">moveWindow</tt><big>(</big><em>window</em>, <em>x</em>, <em>y</em>, <em>delay=200</em>, <em>locking=False</em><big>)</big><a class="headerlink" href="#evogtk.tools.moveWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Animates window widget movement</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="evogtk.tools.newTextTag">
+<tt class="descclassname">evogtk.tools.</tt><tt class="descname">newTextTag</tt><big>(</big><em>attribs={}</em>, <em>buffer=None</em><big>)</big><a class="headerlink" href="#evogtk.tools.newTextTag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text tag helper function for gtk.TextView</p>
+<dl class="docutils">
+<dt>Format of text tag attributes (are optional): </dt>
+<dd><dl class="first docutils">
+<dt>attribs = {</dt>
+<dd>&#8216;name&#8217;: Name of tag. REQUIRED,
+&#8216;background&#8217;: Color as string,
+&#8216;background-gdk&#8217;: Color as gtk.gdk.Color,
+&#8216;direction&#8217;: gtk.TEXT_DIR_NONE, gtk.TEXT_DIR_LTR or gtk.TEXT_DIR_RTL,
+&#8216;editable&#8217;: True or False
+&#8216;family&#8217;: &#8216;Font family name&#8217;,
+&#8216;font&#8217;: Font description as string (I.E. Sans Italic 12),
+&#8216;font-desc&#8217; Font description as pango.FontDescription,
+&#8216;foreground&#8217;: Color as string,
+&#8216;foreground-gdk&#8217;: Color as gtk.gdk.Color,
+&#8216;indent&#8217;: Pixels of indentation for the paragraph,
+&#8216;invisible&#8217;: If True text is hidden,
+&#8216;justification&#8217;: gtk.JUSTIFY_LEFT, gtk.JUSTIFY_RIGHT, gtk.JUSTIFY_CENTER or gtk.JUSTIFY_FILL,
+&#8216;language&#8217;: ISO Code of the text language, 
+&#8216;left-margin&#8217;: Pixels,
+&#8216;paragraph-background&#8217;: Paragraph background color,
+&#8216;pixels-above-lines&#8217;: Pixels of blank space above paragraphs,
+&#8216;pixels-below-lines&#8217;: Pixels of blank space below paragraphs,
+&#8216;pixels-inside-wrap&#8217;: Pixels of blank space between wrapped lines in a paragraph
+&#8216;right-margin&#8217;: Pixels,
+&#8216;rise&#8217;: Pixels (To set above or under (if negative) base text line),
+&#8216;scale&#8217;: Pango relative scale (pango.SCALE_XX_SMALL, pango.SCALE_X_SMALL, pango.SCALE_SMALL, pango.SCALE_MEDIUM, pango.SCALE_LARGE, pango.SCALE_X_LARGE, pango.SCALE_XX_LARGE)
+&#8216;size&#8217;: Font size in Pango units,
+&#8216;size-points&#8217;: Font size in points,
+&#8216;stretch&#8217;: pango.STRETCH_ULTRA_CONDENSED, pango.STRETCH_EXTRA_CONDENSED, pango.STRETCH_CONDENSED, pango.STRETCH_SEMI_CONDENSED, pango.STRETCH_NORMAL, pango.STRETCH_SEMI_EXPANDED, pango.STRETCH_EXPANDED, pango.STRETCH_EXTRA_EXPANDED, pango.STRETCH_ULTRA_EXPANDED,
+&#8216;strikethrough: If True, strike through the text,
+&#8216;style: pango.STYLE_NORMAL, pango.STYLE_OBLIQUE or pango.STYLE_ITALIC,
+&#8216;tabs&#8217;: Custom tabs for this text,
+&#8216;underline&#8217;: pango.UNDERLINE_NONE, pango.UNDERLINE_SINGLE, pango.UNDERLINE_DOUBLE or pango.UNDERLINE_LOW
+&#8216;variant&#8217;: pango.VARIANT_NORMAL or pango.VARIANT_SMALL_CAPS,
+&#8216;weight&#8217;: Font weight as an integer: pango.WEIGHT_ULTRALIGHT = 200, pango.WEIGHT_LIGHT = 300, pango.WEIGHT_NORMAL = 400, pango.WEIGHT_BOLD = 700, pango.WEIGHT_ULTRABOLD = 800, pango.WEIGHT_HEAVY = 900.
+&#8216;wrap-mode&#8217;: gtk.WRAP_NONE, gtk.WRAP_CHAR or gtk.WRAP_WORD,</dd>
+</dl>
+<p class="last">}</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="evogtk.tools.openWithDefaultApp">
+<tt class="descclassname">evogtk.tools.</tt><tt class="descname">openWithDefaultApp</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#evogtk.tools.openWithDefaultApp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a file in default system application</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="evogtk.tools.processPendingEvents">
+<tt class="descclassname">evogtk.tools.</tt><tt class="descname">processPendingEvents</tt><big>(</big><big>)</big><a class="headerlink" href="#evogtk.tools.processPendingEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proccesing of pending gtk events</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="evogtk.tools.resizeWindow">
+<tt class="descclassname">evogtk.tools.</tt><tt class="descname">resizeWindow</tt><big>(</big><em>window</em>, <em>width</em>, <em>height</em>, <em>delay=500</em>, <em>locking=False</em><big>)</big><a class="headerlink" href="#evogtk.tools.resizeWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Animates window widget resize</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="evogtk.tools.setupComboBox">
+<tt class="descclassname">evogtk.tools.</tt><tt class="descname">setupComboBox</tt><big>(</big><em>options</em>, <em>parent=None</em>, <em>active=0</em>, <em>pack_start=False</em>, <em>pack_end=False</em>, <em>expand=True</em>, <em>fill=True</em>, <em>padding=0</em>, <em>changed_callback=None</em><big>)</big><a class="headerlink" href="#evogtk.tools.setupComboBox" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setups a combobox with given options</p>
+</dd></dl>
+
+<div class="section" id="evogtk-keyringmanager-class">
+<h2>3.1. EVOGTK KeyringManager Class<a class="headerlink" href="#evogtk-keyringmanager-class" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="evogtk.tools.keyrings.KeyringManager">
+<em class="property">class </em><tt class="descclassname">evogtk.tools.keyrings.</tt><tt class="descname">KeyringManager</tt><a class="headerlink" href="#evogtk.tools.keyrings.KeyringManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gnome keyring manager class</p>
+<dl class="method">
+<dt id="evogtk.tools.keyrings.KeyringManager.create_key">
+<tt class="descname">create_key</tt><big>(</big><em>keyring</em>, <em>name</em>, <em>attribs</em>, <em>secret</em>, <em>type=0</em>, <em>update=True</em><big>)</big><a class="headerlink" href="#evogtk.tools.keyrings.KeyringManager.create_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new key into specified keyring</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>keyring</strong> (<a class="reference external" href="http://docs.python.org/library/string.html#string" title="(in Python v2.7)"><em>string</em></a>) &#8211; Keyring name this item will belong</li>
+<li><strong>name</strong> (<a class="reference external" href="http://docs.python.org/library/string.html#string" title="(in Python v2.7)"><em>string</em></a>) &#8211; Unique key name inside the keyring</li>
+<li><strong>attribs</strong> (<a class="reference external" href="http://docs.python.org/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) &#8211; Dictionary with custom data</li>
+<li><strong>secret</strong> (<a class="reference external" href="http://docs.python.org/library/string.html#string" title="(in Python v2.7)"><em>string</em></a>) &#8211; What we need to store secretly</li>
+<li><strong>type</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#int" title="(in Python v2.7)"><em>int</em></a>) &#8211; Describes the item that is being added. Can be SECRET, NETWORK and NOTE</li>
+<li><strong>update</strong> (<a class="reference external" href="http://docs.python.org/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) &#8211; If exist a previous item with same name and attributes it will be updated</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Data stored with attribs parameter is mainly used for finding them later with search_key method</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.tools.keyrings.KeyringManager.create_keyring">
+<tt class="descname">create_keyring</tt><big>(</big><em>keyring</em>, <em>password</em><big>)</big><a class="headerlink" href="#evogtk.tools.keyrings.KeyringManager.create_keyring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new keyring with given name and password</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.tools.keyrings.KeyringManager.dump">
+<tt class="descname">dump</tt><big>(</big><big>)</big><a class="headerlink" href="#evogtk.tools.keyrings.KeyringManager.dump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dumps all keys in keyrings into a tuple list of name/secret</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.tools.keyrings.KeyringManager.get_keyrings">
+<tt class="descname">get_keyrings</tt><big>(</big><big>)</big><a class="headerlink" href="#evogtk.tools.keyrings.KeyringManager.get_keyrings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return keyring names list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.tools.keyrings.KeyringManager.remove_key">
+<tt class="descname">remove_key</tt><big>(</big><em>keyring</em>, <em>query</em><big>)</big><a class="headerlink" href="#evogtk.tools.keyrings.KeyringManager.remove_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes a key from an specified keyring that matches specified query</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.tools.keyrings.KeyringManager.remove_keyring">
+<tt class="descname">remove_keyring</tt><big>(</big><em>keyring</em><big>)</big><a class="headerlink" href="#evogtk.tools.keyrings.KeyringManager.remove_keyring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a keyring by its name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.tools.keyrings.KeyringManager.search_key">
+<tt class="descname">search_key</tt><big>(</big><em>query</em><big>)</big><a class="headerlink" href="#evogtk.tools.keyrings.KeyringManager.search_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search for a key into the keyrings using query parameters</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">3. EVOGTK tools module</a><ul>
+<li><a class="reference internal" href="#evogtk-keyringmanager-class">3.1. EVOGTK KeyringManager Class</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="gui.html"
+                        title="previous chapter">2. EVOGTK GUI module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/tools.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="gui.html" title="2. EVOGTK GUI module"
+             >previous</a> |</li>
+        <li><a href="index.html">EVOGTK 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Oliver Gutiérrez.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

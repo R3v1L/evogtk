@@ -1,0 +1,12 @@
+EVOGTK Graphical User interface module
+**************************************
+
+.. automodule:: evogtk.gui
+
+EVOGTK Application class
+========================
+
+This is the core class for EVOGTK library. It has to be subclassed to be used.
+
+.. automodule:: evogtk.gui.guiclass
+	:members:

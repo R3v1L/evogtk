@@ -19,29 +19,24 @@
 # EVOGTK Custom Widgets
 ###############################################################################
 
-# EVOGTK Imports
-import evogtk
+# EVOGTK base widgets
+from gui.widgetlib.cairocanvas import CairoCanvas
+from gui.widgetlib.cairoscroller import CairoScroller
+from gui.widgetlib.floatingwindow import FloatingWindow
+from gui.widgetlib.srceditor import SourceEditor
+from gui.widgetlib.trayicon import TrayIcon
+from gui.widgetlib.trayicon import AppIndicator
+from gui.widgetlib.webbrowser import WebBrowser
+from gui.widgetlib.datepicker import DatePicker
+from gui.widgetlib.regexpentry import RegExpEntry
+from gui.widgetlib.colorpicker import ColorPicker
+from gui.widgetlib.fontcombo import FontCombo
 
-# Widget imports
-from evogtk.widgets.cairocanvas import CairoCanvas
-from evogtk.widgets.cairoscroller import CairoScroller
-from evogtk.widgets.floatingwindow import FloatingWindow
-from evogtk.widgets.trayicon import TrayIcon
-from evogtk.widgets.regexpentry import RegExpEntry
-from evogtk.widgets.datepicker import DatePicker
-from evogtk.widgets.colorpicker import ColorPicker
-from evogtk.widgets.fontcombo import FontCombo
-
-# DB Widgets
-from evogtk.widgets.dbwidgets.dbentry import DBEntry
-from evogtk.widgets.dbwidgets.dbspinbutton import DBSpinButton
-from evogtk.widgets.dbwidgets.dbcombobox import DBComboBox
-from evogtk.widgets.dbwidgets.dbcheckbutton import DBCheckButton
-from evogtk.widgets.dbwidgets.dbregexpentry import DBRegExpEntry
-from evogtk.widgets.dbwidgets.dbdatepicker import DBDatePicker
-
-# Conditional imports
-if evogtk.HAS_GTKSOURCEVIEW:
-    from evogtk.widgets.srceditor import SourceEditor
-if evogtk.HAS_GTKMOZEMBED:
-    from evogtk.widgets.webbrowser import WebBrowser
+# EVOGTK database widgets
+from gui.widgetlib.dbentry import DBEntry 
+from gui.widgetlib.dbspinbutton import DBSpinButton
+from gui.widgetlib.dbcombobox import DBComboBox
+from gui.widgetlib.dbcheckbutton import DBCheckButton
+from gui.widgetlib.dbdatepicker import DBDatePicker
+from gui.widgetlib.dbcalendar import DBCalendar
+from gui.widgetlib.dbregexpentry import DBRegExpEntry

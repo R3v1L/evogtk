@@ -1,0 +1,216 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>1. EVOGTK Graphical User interface module &mdash; EVOGTK 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="EVOGTK 1.0.0 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to EVOGTK’s documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to EVOGTK’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">EVOGTK 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="module-evogtk.gui">
+<span id="evogtk-graphical-user-interface-module"></span><h1>1. EVOGTK Graphical User interface module<a class="headerlink" href="#module-evogtk.gui" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="evogtk-application-class">
+<h2>1.1. EVOGTK Application class<a class="headerlink" href="#evogtk-application-class" title="Permalink to this headline">¶</a></h2>
+<p>This is the core class for EVOGTK library. It has to be subclassed to be used.</p>
+<span class="target" id="module-evogtk.gui.guiclass"></span><dl class="class">
+<dt id="evogtk.gui.guiclass.GUIClass">
+<em class="property">class </em><tt class="descclassname">evogtk.gui.guiclass.</tt><tt class="descname">GUIClass</tt><big>(</big><em>guifiles=</em><span class="optional">[</span><span class="optional">]</span>, <em>configfile=None</em>, <em>mainapp=True</em>, <em>env=None</em>, <em>controlled_quit=True</em>, <em>dialogs=True</em>, <em>splash=True</em>, <em>debug=False</em>, <em>localedir='locale'</em>, <em>pixmapsdir='pixmaps'</em>, <em>disablenotifsys=False</em>, <em>forceinternalnotifsys=False</em>, <em>**kwargs</em><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>GUI helper class</p>
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.debug_status">
+<tt class="descname">debug_status</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.debug_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.debug_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns debug setting</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.get_gui_task">
+<tt class="descname">get_gui_task</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.get_gui_task"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.get_gui_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns current GUI task mode</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.hide_splash">
+<tt class="descname">hide_splash</tt><big>(</big><em>callback=None</em><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.hide_splash"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.hide_splash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hides the splash screen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.initialize">
+<tt class="descname">initialize</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dummy initialize method for application</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.quit">
+<tt class="descname">quit</tt><big>(</big><em>userbreak=False</em>, <em>status=0</em><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.quit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.quit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finish application</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.quitApplication">
+<tt class="descname">quitApplication</tt><big>(</big><em>widget</em>, <em>event=None</em><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.quitApplication"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.quitApplication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show default quit dialog</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.run">
+<tt class="descname">run</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launch main application loop</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.savePreferences">
+<tt class="descname">savePreferences</tt><big>(</big><em>widget=None</em><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.savePreferences"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.savePreferences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save application preferences</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.set_environment">
+<tt class="descname">set_environment</tt><big>(</big><em>env</em>, <em>strict=True</em><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.set_environment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.set_environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set application environment if needed</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.set_gui_task">
+<tt class="descname">set_gui_task</tt><big>(</big><em>mode</em><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.set_gui_task"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.set_gui_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setups GUI for an specified task</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.showAbout">
+<tt class="descname">showAbout</tt><big>(</big><em>widget=None</em><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.showAbout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.showAbout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show default about dialog</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.showPreferences">
+<tt class="descname">showPreferences</tt><big>(</big><em>widget=None</em><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.showPreferences"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.showPreferences" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show preferences dialog</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.show_mainwindow">
+<tt class="descname">show_mainwindow</tt><big>(</big><em>window</em><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.show_mainwindow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.show_mainwindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show main window ant take care about splash screen hiding</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.show_splash">
+<tt class="descname">show_splash</tt><big>(</big><em>splashimg='splash.png'</em>, <em>seconds=3</em><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.show_splash"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.show_splash" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shows an splash screen using an image</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="evogtk.gui.guiclass.GUIClass.unload">
+<tt class="descname">unload</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/evogtk/gui/guiclass.html#GUIClass.unload"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#evogtk.gui.guiclass.GUIClass.unload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dummy cleanup method for application end (mostly used in plugins)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">1. EVOGTK Graphical User interface module</a><ul>
+<li><a class="reference internal" href="#evogtk-application-class">1.1. EVOGTK Application class</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to EVOGTK&#8217;s documentation!</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/prueba.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to EVOGTK’s documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">EVOGTK 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Oliver Gutiérrez.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
